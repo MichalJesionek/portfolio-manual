@@ -1,0 +1,181 @@
+Test Plan for https://www.demoqa.com/*
+
+Introduction:
+
+This document outlines the testing approach for the website https://www.demoqa.com/* along with all of the subpages on which variety of functionalities are presented.
+The purpose is to ensure the quality and functionality of the website using BlackBox testing methodology along with the proper overall user expierence.
+
+Scope:
+
+The test plan covers testing of all functionalities available on the website https://www.demoqa.com/* along with the properly made layout for better user experience.
+
+Test Objectives:
+
+Validate the functionality of each feature and element on the website.
+Identify and report any defects or issues found during testing.
+Ensure that the website meets the specified requirements and user expectations along with the overall user experience.
+
+Test Environment:
+
+Test environment:  
+Operating System - Ubuntu 22.04.4 LTS with latest stable packages available and with GUI (GNOME v42.9 using Wayland windowing system)
+Browser - Google Chrome version 123.0.6312.86 (Official Build)
+Screen Resolution - 1920x1200
+Processor - Intel Core i5-4440 CPU @ 3.10GHz × 4
+RAM - 16GB DDR4
+Graphics Card - Mesa Intel HD Graphics 4600 (HSW GT2)
+Internet Connection - Stable broadband connection with minimum 10 Mbps download and upload speeds.
+
+Tools: Katalon and SoapUI for API testing, https://www.fakenamegenerator.com website to generate random data such as addresses, full names etc.
+
+1. Elements of the Website:
+
+1.1 Text Box:
+
+a. Open the website https://www.demoqa.com/text-box in the browser,
+b. Fill the text boxes with valid data generated on https://www.fakenamegenerator.com (full name, email, current address, permament address),
+c. Click on the "Submit" button,
+d. Verify that the filled data is printed below the text boxes,
+e. Ensure that proper validation messages are displayed for empty fields,
+f. Verify if filled data are printed below text boxes if only one or few of the text boxes are filled,
+g. Verify if change of data inside any of text boxes will result in changing it below text boxes after click on "Submit" button,
+h. Verify if any error/informational message will be shown when no data will be provided inside the text boxes,
+i. Verify the correct syntax validation for the email address box.
+
+Expected Results:
+
+a. The website https://www.demoqa.com/text-box loads successfully in the browser without any visible missing layout elements,
+b. The text boxes for full name, email, current address, and permanent address are filled with valid data,
+c. After clicking on the "Submit" button, the filled data is successfully submitted,
+d. Verify that the filled data is printed below the text boxes without any grammatical or syntax errors, indicating successful submission,
+e. Proper validation messages are displayed for any empty fields, guiding the user to fill them out,
+f. If only one or a few of the text boxes are filled, only the filled data is printed below the text boxes, while the empty ones remain blank,
+g. Any changes made to the data inside the text boxes are reflected below the text boxes after clicking on the "Submit" button,
+h. If no data is provided inside the text boxes and the "Submit" button is clicked, an error or informational message is displayed prompting the user to fill out the required fields,
+i. Correct syntax validation for the email address box ensures that only properly formatted email addresses are accepted. An error message is displayed or the text box is outlined when an invalid email address is entered.
+
+1.2 Check Box:
+
+Test Objective: Verify functionality of check boxes.
+Test Steps:
+Check single and multiple check boxes.
+Verify display of relevant information.
+Test expanding and collapsing of check box list.
+Expected Results:
+All check boxes can be checked.
+Relevant information displayed upon selection.
+Proper behavior of the expand/collapse feature.
+(Continue similarly for each element)
+
+2. Forms:
+
+2.1 Practice Form:
+
+Test Objective: Verify functionality of the practice form.
+Test Steps:
+Fill out the form with valid data.
+Submit the form with incomplete data.
+Expected Results:
+Form submission successful with valid data.
+Proper handling of incomplete submissions.
+(Continue similarly for each section)
+
+3. Alerts, Frames, and Windows:
+
+(Include objectives, test steps, and expected results)
+
+4. Widgets:
+
+(Include objectives, test steps, and expected results)
+
+5. Interactions:
+
+(Include objectives, test steps, and expected results)
+
+6. Book Store Application:
+
+(Include objectives, test steps, and expected results)
+
+Preconditions and Assumptions:
+
+The website is accessible and functional.
+Test environment is properly set up.
+Test data is available for form submissions and interactions.
+Test Data Management:
+
+Test data will be managed using specific tool or approach.
+Test data creation, storage, and cleanup will be automated.
+Error Handling Scenarios:
+
+Include test cases to verify error handling for invalid inputs, unexpected user actions, and server errors.
+Test Execution and Reporting:
+
+Tests will be executed using testing tool or framework.
+Test results will be recorded in specified format or tool.
+Issues or defects identified during testing will be reported in specified tool or system.
+Review and Validation:
+
+The test plan will be reviewed by stakeholders to ensure alignment with project requirements.
+Test coverage will be validated against system functionality to ensure completeness.
+
+
+
+Test Plan for https://www.demoqa.com/
+
+1. Introduction:
+
+This document outlines the testing approach for the website https://www.demoqa.com/.
+The purpose is to ensure the quality and functionality of the website using BlackBox testing methodology.
+2. Scope:
+
+The test plan covers testing of all functionalities available on the website https://www.demoqa.com/.
+3. Test Objectives:
+
+Validate the functionality of each feature and element on the website.
+Identify and report any defects or issues found during testing.
+Ensure that the website meets the specified requirements and user expectations.
+4. Test Environment:
+
+Test environment: [Specify the test environment, e.g., browser, operating system, etc.]
+Tools: [Specify any testing tools or frameworks used for testing.]
+5. Test Cases:
+
+5.1 Elements of the Website:
+
+[List all test cases for text boxes, check boxes, radio buttons, web tables, buttons, links, broken links/images, upload/download, dynamic properties.]
+5.2 Forms:
+
+[List all test cases for practice form and any other forms available.]
+5.3 Alerts, Frame, and Windows:
+
+[List all test cases for browser windows, alerts, frames, nested frames, modal dialogs.]
+5.4 Widgets:
+
+[List all test cases for accordian, auto complete, date picker, slider, progress bar, tabs, tool tips, menu, select menu.]
+5.5 Interactions:
+
+[List all test cases for sortable, selectable, resizable, droppable, draggable.]
+5.6 Book Store Application:
+
+[List all test cases for login, book store, profile, book store API.]
+6. Test Data:
+
+Test data will be generated internally for form submissions, interactions, and other scenarios as needed.
+7. Test Execution:
+
+Execute each test case according to the defined steps.
+Record test results, including pass/fail status, observations, and any defects found.
+8. Error Handling:
+
+Include test cases to verify error handling scenarios, such as invalid inputs, unexpected user actions, and server errors.
+9. Reporting:
+
+Test results will be documented in a test report.
+Defects will be logged in the defect tracking system with proper prioritization and severity.
+10. Review and Validation:
+
+The test plan will be reviewed by stakeholders to ensure coverage and alignment with project requirements.
+Test coverage will be validated against system functionality to ensure completeness.
+11. Conclusion:
+
+Upon completion of testing, a summary report will be prepared, highlighting key findings and recommendations for improvement.
