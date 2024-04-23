@@ -3,17 +3,17 @@ Test Plan for https://www.demoqa.com/*
 Introduction:
 
 This document outlines the testing approach for the website https://www.demoqa.com/* along with all of the subpages on which variety of functionalities are presented.
-The purpose is to ensure the quality and functionality of the website using BlackBox testing methodology along with the proper overall user expierence.
+The purpose is to ensure the quality and functionality of the website using BlackBox testing methodology.
 
 Scope:
 
-The test plan covers testing of all functionalities available on the website https://www.demoqa.com/* along with the properly made layout for better user experience.
+The test plan covers testing of all functionalities available on the website https://www.demoqa.com/*.
 
 Test Objectives:
 
 Validate the functionality of each feature and element on the website.
 Identify and report any defects or issues found during testing.
-Ensure that the website meets the specified requirements and user expectations along with the overall user experience.
+Ensure that the website meets the specified requirements and user expectations.
 
 Test Environment:
 
@@ -31,8 +31,10 @@ Tools: Katalon and SoapUI for API testing, https://www.fakenamegenerator.com web
 1. Elements of the Website:
 
 1.1 Text Box:
+Test Objective: Verify functionality of text boxes.
 
-a. Open the website https://www.demoqa.com/text-box in the browser,
+Test steps:
+a. Open the website https://www.demoqa.com/text-box in the browser to initiate the testing process,
 b. Fill the text boxes with valid data generated on https://www.fakenamegenerator.com (full name, email, current address, permament address),
 c. Click on the "Submit" button,
 d. Verify that the filled data is printed below the text boxes,
@@ -43,7 +45,6 @@ h. Verify if any error/informational message will be shown when no data will be 
 i. Verify the correct syntax validation for the email address box.
 
 Expected Results:
-
 a. The website https://www.demoqa.com/text-box loads successfully in the browser without any visible missing layout elements,
 b. The text boxes for full name, email, current address, and permanent address are filled with valid data,
 c. After clicking on the "Submit" button, the filled data is successfully submitted,
@@ -55,17 +56,50 @@ h. If no data is provided inside the text boxes and the "Submit" button is click
 i. Correct syntax validation for the email address box ensures that only properly formatted email addresses are accepted. An error message is displayed or the text box is outlined when an invalid email address is entered.
 
 1.2 Check Box:
-
 Test Objective: Verify functionality of check boxes.
+
 Test Steps:
-Check single and multiple check boxes.
-Verify display of relevant information.
-Test expanding and collapsing of check box list.
+a. Open the website https://www.demoqa.com/checkbox in the browser to initiate the testing process,
+b. For single checkboxes, ensure that only one checkbox can be selected at a time by clicking on each available checkbox, also it's respective catalouge should be checked automatically,
+c. For multiple checkboxes, ensure that multiple checkboxes can be selected simultaneously by clicking on few of available checkboxes, and their respective catalogs should be checked automatically. Additionally, if checking the checkbox for the entire catalog, all files within that catalog should be checked automatically,
+d. Test the expanding and collapsing of the checkbox list:
+ d.a. Verify if catalogs list is expanding and collapsing properly by clicking on the expand/collapse icon on the left from each catalog,
+ d.b. Verify that clicking on the expand all icon (plus) expands the list to show nested checkboxes,
+  d.b.a Click on the "Expand All" button and ensure that all nested checkboxes are expanded,
+ d.c Verify that clicking on the collapse all icon (minus) collapses the list to hide nested checkboxes,
+  d.c.a Click on the "Hide All" button and ensure that all nested checkboxes are collapsed,
+e. Check if proper information about the checked checkboxes (labels of every checkbox) is displayed below the list:
+ e.a. Verify that the labels of all checked checkboxes are displayed accurately and clearly below the list.
+
 Expected Results:
-All check boxes can be checked.
-Relevant information displayed upon selection.
-Proper behavior of the expand/collapse feature.
-(Continue similarly for each element)
+a. The website https://www.demoqa.com/checkbox loads successfully in the browser without any visible missing layout elements.
+b. When selecting a single checkbox, only that checkbox should be selected, and its respective catalog should be checked automatically.
+c. When selecting multiple checkboxes simultaneously, all selected checkboxes should remain checked, and their respective catalogs should be checked automatically. Additionally, if the checkbox for an entire catalog is selected, all files within that catalog should be checked automatically.
+d. Clicking on the expand/collapse icons should expand or collapse the respective catalog list. Clicking on the "Expand All" button should expand all nested checkboxes, ensuring all files are visible. Clicking on the "Hide All" button should collapse all nested checkboxes, hiding all files.
+e. The labels of all checked checkboxes should be displayed accurately and clearly below the list, matching the checkboxes selected by the user.
+
+1.3 Radio button:
+Test Objective: Verify functionality of radio buttons.
+
+Test steps:
+a. Open the website https://www.demoqa.com/radio-button in the browser to initiate the testing process,
+b. Verify the availability and functionality of each radio button:
+ b.a. Click on each radio button to ensure it can be selected,
+ b.b. Verify that selecting one radio button deselects any previously selected radio button,
+ b.c. Ensure that all visible radio buttons are available for selection,
+c. Validate the display of information about the chosen radio button:
+ c.a. After selecting a radio button, verify that relevant information about the chosen option is printed below the radio buttons,
+ c.b. Ensure that the displayed information includes the label or name of the selected radio button.
+
+Expected Results:
+a. The website https://www.demoqa.com/radio-button loads successfully in the browser without any visible missing layout elements.
+b. Verify availability and functionality:
+ b.a. Each radio button on the page can be clicked and selected individually.
+ b.b. Selecting one radio button deselects any previously selected radio button, ensuring exclusive selection behavior.
+ b.c. All visible radio buttons are present and available for selection without any missing or inaccessible options.
+c. Validate display of information:
+ c.a. After selecting a radio button, relevant information about the chosen option is accurately displayed below the radio buttons.
+ c.b. The displayed information includes the label or name of the selected radio button, ensuring clear feedback for the user.
 
 2. Forms:
 
@@ -120,44 +154,6 @@ Test coverage will be validated against system functionality to ensure completen
 
 
 
-Test Plan for https://www.demoqa.com/
-
-1. Introduction:
-
-This document outlines the testing approach for the website https://www.demoqa.com/.
-The purpose is to ensure the quality and functionality of the website using BlackBox testing methodology.
-2. Scope:
-
-The test plan covers testing of all functionalities available on the website https://www.demoqa.com/.
-3. Test Objectives:
-
-Validate the functionality of each feature and element on the website.
-Identify and report any defects or issues found during testing.
-Ensure that the website meets the specified requirements and user expectations.
-4. Test Environment:
-
-Test environment: [Specify the test environment, e.g., browser, operating system, etc.]
-Tools: [Specify any testing tools or frameworks used for testing.]
-5. Test Cases:
-
-5.1 Elements of the Website:
-
-[List all test cases for text boxes, check boxes, radio buttons, web tables, buttons, links, broken links/images, upload/download, dynamic properties.]
-5.2 Forms:
-
-[List all test cases for practice form and any other forms available.]
-5.3 Alerts, Frame, and Windows:
-
-[List all test cases for browser windows, alerts, frames, nested frames, modal dialogs.]
-5.4 Widgets:
-
-[List all test cases for accordian, auto complete, date picker, slider, progress bar, tabs, tool tips, menu, select menu.]
-5.5 Interactions:
-
-[List all test cases for sortable, selectable, resizable, droppable, draggable.]
-5.6 Book Store Application:
-
-[List all test cases for login, book store, profile, book store API.]
 6. Test Data:
 
 Test data will be generated internally for form submissions, interactions, and other scenarios as needed.
