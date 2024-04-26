@@ -45,7 +45,7 @@ h. Verify if any error/informational message will be shown when no data will be 
 i. Verify the correct syntax validation for the email address box.
 
 Expected Results:
-a. The website https://www.demoqa.com/text-box loads successfully in the browser without any visible missing layout elements,
+a. The website https://www.demoqa.com/text-box loads successfully in the browser, displaying all elements without any missing layout components,
 b. The text boxes for full name, email, current address, and permanent address are filled with valid data,
 c. After clicking on the "Submit" button, the filled data is successfully submitted,
 d. Verify that the filled data is printed below the text boxes without any grammatical or syntax errors, indicating successful submission,
@@ -72,10 +72,10 @@ e. Check if proper information about the checked checkboxes (labels of every che
  e.a. Verify that the labels of all checked checkboxes are displayed accurately and clearly below the list.
 
 Expected Results:
-a. The website https://www.demoqa.com/checkbox loads successfully in the browser without any visible missing layout elements.
-b. When selecting a single checkbox, only that checkbox should be selected, and its respective catalog should be checked automatically.
-c. When selecting multiple checkboxes simultaneously, all selected checkboxes should remain checked, and their respective catalogs should be checked automatically. Additionally, if the checkbox for an entire catalog is selected, all files within that catalog should be checked automatically.
-d. Clicking on the expand/collapse icons should expand or collapse the respective catalog list. Clicking on the "Expand All" button should expand all nested checkboxes, ensuring all files are visible. Clicking on the "Hide All" button should collapse all nested checkboxes, hiding all files.
+a. The website https://www.demoqa.com/checkbox loads successfully in the browser, displaying all elements without any missing layout components,
+b. When selecting a single checkbox, only that checkbox should be selected, and its respective catalog should be checked automatically,
+c. When selecting multiple checkboxes simultaneously, all selected checkboxes should remain checked, and their respective catalogs should be checked automatically. Additionally, if the checkbox for an entire catalog is selected, all files within that catalog should be checked automatically,
+d. Clicking on the expand/collapse icons should expand or collapse the respective catalog list. Clicking on the "Expand All" button should expand all nested checkboxes, ensuring all files are visible. Clicking on the "Hide All" button should collapse all nested checkboxes, hiding all files,
 e. The labels of all checked checkboxes should be displayed accurately and clearly below the list, matching the checkboxes selected by the user.
 
 1.3 Radio button:
@@ -92,14 +92,126 @@ c. Validate the display of information about the chosen radio button:
  c.b. Ensure that the displayed information includes the label or name of the selected radio button.
 
 Expected Results:
-a. The website https://www.demoqa.com/radio-button loads successfully in the browser without any visible missing layout elements.
+a. The website https://www.demoqa.com/radio-button loads successfully in the browser, displaying all elements without any missing layout components,
 b. Verify availability and functionality:
- b.a. Each radio button on the page can be clicked and selected individually.
- b.b. Selecting one radio button deselects any previously selected radio button, ensuring exclusive selection behavior.
- b.c. All visible radio buttons are present and available for selection without any missing or inaccessible options.
+ b.a. Each radio button on the page can be clicked and selected individually,
+ b.b. Selecting one radio button deselects any previously selected radio button, ensuring exclusive selection behavior,
+ b.c. All visible radio buttons are present and available for selection without any missing or inaccessible options,
 c. Validate display of information:
- c.a. After selecting a radio button, relevant information about the chosen option is accurately displayed below the radio buttons.
+ c.a. After selecting a radio button, relevant information about the chosen option is accurately displayed below the radio buttons,
  c.b. The displayed information includes the label or name of the selected radio button, ensuring clear feedback for the user.
+
+1.4 Web tables:
+Test Objective: Verify functionality of web table.
+
+Test steps:
+a. Open the website https://www.demoqa.com/webtables in the browser to initiate the testing process,
+b. Verify the presence and functionality of sorting options:
+ b.a. Click on the header of each column (First Name, Last Name, Age, Email, Salary, Department),
+ b.b. Confirm that clicking on a column header sorts the table data alphabetically or numerically based on that column,
+ b.c. Ensure that clicking on the same column header again reverses the sorting order,
+ b.d. Click on a different column header of each column (First Name, Last Name, Age, Email, Salary, Department) to sort the table data alphabetically or numerically based on that column, disregarding any previous sorting,
+ b.e. Ensure that clicking on a different column header sorts the table data alphabetically or numerically based on that column, disregarding any previous sorting,
+c. Verify the availability to change column width:
+ c.a. Locate the column header and hover over between that header and the next one to reveal the option for changing the column width,
+ c.b. Click on the pitch between headers and drag to adjust the width of the column,
+ c.c. Ensure that the column width changes accordingly, allowing users to customize their view of the table.
+d. Verify the functionality to change the number of displayed rows:
+ d.a. Locate the dropdown menu or control for selecting the number of rows to display,
+ d.b. Select different options (5, 10, 15, 20, 25, 50, 100) and verify that the table updates to display the specified number of rows,
+ d.c. Ensure that pagination controls are provided if the number of rows exceeds the available space, allowing navigation through multiple pages using "Previous" and "Next" buttons, which should become active. Also, provide the exact page number to which you want to navigate to ensure that it is working properly,
+e. Verify the ability to delete data from the table:
+ e.a. Locate the delete option (trash icon) associated with each row of data,
+ e.b. Click on the delete icon for a specific row and verify that the corresponding data is removed from the table,
+f. Verify the ability to edit existing data in the table:
+ f.a. Locate the edit icon (pen icon) associated with each row of data,
+ f.b. Click on the edit icon for a specific row and modify any data (First Name, Last Name, Age, Email, Salary, Department) using generated data from https://www.fakenamegenerator.com,
+ f.c. Verify the correct syntax validation for the age box, email address box, and salary box,
+ f.d. Ensure that the changes are reflected in the table after editing,
+g. Verify the ability to add new items to the table based on sorted data:
+ g.a. Locate the "Add" button (visible on the left above the table) for adding a new item to the table,
+ g.b. Confirm that a new popup window appears after clicking the "Add" button,
+ g.c. Input data in all fields using generated data from https://www.fakenamegenerator.com website and click on the "Submit" button to add a new row to the table with data properly sorted according to the existing columns,
+ g.d. Verify the correct syntax validation for the age box, email address box, and salary box,
+ g.e. Ensure that the new item appears in the table and is sorted correctly based on the selected column,
+h. Verify the ability to add new items to the table with incomplete data:
+ h.a. Locate the "Add" button (visible on the left above the table) for adding a new item to the table,
+ h.b. Confirm that a new popup window appears after clicking the "Add" button,
+ h.c. Input data in only one field or in half of them using generated data from https://www.fakenamegenerator.com website and click on the "Submit" button to add a new row to the table with data properly sorted according to the existing columns,
+ h.d. Ensure that proper validation messages are displayed for empty fields,
+ h.e. Verify the correct syntax validation for the age box, email address box, and salary box,
+ h.f. Ensure that displayed data form will not allow to add new table row without providing data in all of the required fields,
+i. Verify the functionality of the search feature:
+ i.a. Locate the search input field or search bar provided for searching within the table (visible on the right above the table),
+ i.b. Enter specific keywords or data to search for within the table,
+ i.c. Verify that the table updates to display only the rows that match the search criteria.
+
+Expected Results:
+a. The website https://www.demoqa.com/webtables loads successfully in the browser, displaying all elements without any missing layout components,
+b. Clicking on the header of each column (First Name, Last Name, Age, Email, Salary, Department) should sort the table data alphabetically or numerically based on that column,
+ b.a. Clicking on the same column header again should reverse the sorting order,
+ b.b. Clicking on the other column header should sort the table data alphabetically or numerically based on that column ignoring previous sorting,
+c. Hovering over between the column headers should reveal the option for adjusting the column width,
+ c.a. Clicking and dragging between column headers should adjust the width of the column accordingly, allowing users to customize their view of the table.
+d. Selecting different options (5, 10, 15, 20, 25, 50, 100) from the dropdown menu for the number of rows to display should update the table to show the specified number of rows,
+d.a. Pagination controls should be provided if the number of rows exceeds the available space, allowing navigation through multiple pages using "Previous" and "Next" buttons. The page number provided manually should accurately navigate to the desired page,
+e. Clicking on the delete option (trash icon) associated with each row of data should remove the corresponding row from the table,
+f. Clicking on the edit icon (pen icon) associated with each row of data should allow modification of any data in new popup window (First Name, Last Name, Age, Email, Salary, Department),
+ f.a. The correct syntax validation for the age box, email address box, and salary box should be enforced,
+ f.b. Changes made should be reflected in the table after editing,
+g. Clicking on the "Add" button should reveal a popup window for adding a new item to the table,
+ g.a. Entering data in all fields using generated data from https://www.fakenamegenerator.com website and clicking on the "Submit" button should add a new row to the table with data properly sorted according to the existing columns,
+ g.b. The correct syntax validation for the age box, email address box, and salary box should be enforced,
+ g.c. The new item should appear in the table and be sorted correctly based on the selected column,
+h. Clicking on the "Add" button should reveal a popup window for adding a new item to the table,
+ h.a. Entering data in only one field or in half of them using generated data from https://www.fakenamegenerator.com website and clicking on the "Submit" button should not allow adding a new table row without providing data in all of the required fields,
+ h.b. Proper validation messages should be displayed for empty fields,
+ h.c. The correct syntax validation for the age box, email address box, and salary box should be enforced,
+i. Entering specific keywords or data in the search input field should update the table to display only the rows that match the search criteria.
+
+1.5 Buttons:
+Test Objective: Verify functionality of buttons.
+
+Test steps:
+a. Open the website https://www.demoqa.com/buttons in the browser to initiate the testing process,
+b. Click on each button accordingly to its label: "Double Click Me" - double click, "Right Click Me" - right mouse button, "Click Me" - single click,
+ b.a. Ensure that all of the buttons can be clicked according to their respective labels,
+ b.b. Ensure that proper information is displayed below all buttons according to the button which was clicked,
+ b.c. Ensure that displayed information is changing according to the button which was clicked with disregarding previously clicked button.
+
+Expected Results:
+a. The website https://www.demoqa.com/buttons loads successfully in the browser, displaying all buttons without any missing layout components,
+b. After clicking on each button:
+ b.a. Verify that all of the buttons can be clicked according to their respective labels,
+ b.b. Confirm that proper information is displayed below all buttons according to the button which was clicked,
+ b.c. Ensure that the displayed information changes according to the button which was clicked, disregarding any previously clicked button.
+
+1.6 Links:
+Test Objective: Verify functionality of embedded links.
+
+Test steps:
+a. Open the website https://www.demoqa.com/links in the browser to initiate the testing process,
+b. Click on the "Home" link. Ensure that it opens in a new tab,
+Click on the second link below the "Home" link. Note that its label may dynamically change after reloading the webpage, but it should look like "HomeUBcks". Ensure that it opens in a new tab,
+d. Click on the "Created" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+e. Click on the "No Content" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+f. Click on the "Moved" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+g. Click on the "Bad Request" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+h. Click on the "Unauthorized" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+i. Click on the "Forbidden" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+j. Click on the "Not Found" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+
+Expected Results:
+a. The website https://www.demoqa.com/links loads successfully in the browser, displaying all elements without any missing layout components,
+b. After clicking on the "Home" link, the website https://www.demoqa.com should open in a new tab,
+c. After clicking on the second link below the "Home" link, note that its label may dynamically change after reloading the webpage, but it should resemble "HomeUBcks". The website https://www.demoqa.com should open in a new tab,
+d. After clicking on the "Created" link, it should send an API call. The displayed information, including the proper API call status code (201) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+e. After clicking on the "No Content" link, it should send an API call. The displayed information, including the proper API call status code (204) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+f. After clicking on the "Moved" link, it should send an API call. The displayed information, including the proper API call status code (301) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+g. After clicking on the "Bad Request" link, it should send an API call. The displayed information, including the proper API call status code (400) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+h. After clicking on the "Unauthorized" link, it should send an API call. The displayed information, including the proper API call status code (401) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+i. After clicking on the "Forbidden" link, it should send an API call. The displayed information, including the proper API call status code (403) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+j. After clicking on the "Not Found" link, it should send an API call. The displayed information, including the proper API call status code (404) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
 
 2. Forms:
 
