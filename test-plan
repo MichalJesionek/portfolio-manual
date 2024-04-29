@@ -191,27 +191,83 @@ Test Objective: Verify functionality of embedded links.
 
 Test steps:
 a. Open the website https://www.demoqa.com/links in the browser to initiate the testing process,
-b. Click on the "Home" link. Ensure that it opens in a new tab,
-Click on the second link below the "Home" link. Note that its label may dynamically change after reloading the webpage, but it should look like "HomeUBcks". Ensure that it opens in a new tab,
-d. Click on the "Created" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
-e. Click on the "No Content" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
-f. Click on the "Moved" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
-g. Click on the "Bad Request" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
-h. Click on the "Unauthorized" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
-i. Click on the "Forbidden" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
-j. Click on the "Not Found" link. Verify that it sends an API call and note the API status code along with the status text corresponding to the link label,
+b. Click on the embedded "Home" link. Ensure that it opens in a new tab,
+c. Click on the second embedded link below the "Home" link. Note that its label may dynamically change after reloading the webpage, but it should look like "Home[additional text]". Ensure that it opens in a new tab,
+d. Click on the embedded "Created" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response,
+e. Click on the embedded "No Content" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response,
+f. Click on the embedded "Moved" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response,
+g. Click on the embedded "Bad Request" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response,
+h. Click on the embedded "Unauthorized" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response,
+i. Click on the embedded "Forbidden" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response,
+j. Click on the embedded "Not Found" link. In the developer tools of the browser, navigate to the Network tab and verify that clicking on the link sends a proper API call and receives a proper API code response by recording that call and its response.
 
 Expected Results:
 a. The website https://www.demoqa.com/links loads successfully in the browser, displaying all elements without any missing layout components,
-b. After clicking on the "Home" link, the website https://www.demoqa.com should open in a new tab,
-c. After clicking on the second link below the "Home" link, note that its label may dynamically change after reloading the webpage, but it should resemble "HomeUBcks". The website https://www.demoqa.com should open in a new tab,
-d. After clicking on the "Created" link, it should send an API call. The displayed information, including the proper API call status code (201) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
-e. After clicking on the "No Content" link, it should send an API call. The displayed information, including the proper API call status code (204) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
-f. After clicking on the "Moved" link, it should send an API call. The displayed information, including the proper API call status code (301) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
-g. After clicking on the "Bad Request" link, it should send an API call. The displayed information, including the proper API call status code (400) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
-h. After clicking on the "Unauthorized" link, it should send an API call. The displayed information, including the proper API call status code (401) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
-i. After clicking on the "Forbidden" link, it should send an API call. The displayed information, including the proper API call status code (403) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
-j. After clicking on the "Not Found" link, it should send an API call. The displayed information, including the proper API call status code (404) along with the status text corresponding to the link label, should be shown below all links. After clicking on other links, the displayed information should change accordingly to the clicked link.
+b. After clicking on the embedded "Home" link, the website https://www.demoqa.com should open in a new tab,
+c. After clicking on the second embedded link below the "Home" link, note that its label may dynamically change after reloading the webpage, but it should resemble "Home[here is dynamically changing additional text]". The website https://www.demoqa.com should open in a new tab,
+d. After clicking on the embedded "Created" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
+e. After clicking on the embedded "No Content" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
+f. After clicking on the embedded "Moved" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
+g. After clicking on the embedded "Bad Request" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
+h. After clicking on the embedded "Unauthorized" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
+i. After clicking on the embedded "Forbidden" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
+j. After clicking on the embedded "Not Found" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]".
+
+1.6 Links:
+Test Objective: Verify functionality of displaying images and embedded links.
+
+Test steps:
+a. Open the website https://www.demoqa.com/broken in the browser to initiate the testing process,
+b. Ensure that image is properly dsiplayed below "Valid image" title,
+c. Confirm that a broken/missing image icon is displayed below the "Broken image" title,
+d. Locate the embedded link labeled as "Click Here for Valid Link" below the "Valid Link" title and click on it to ensure it redirects to the correct destination, specifically https://www.demoqa.com website,
+e. Locate the embedded link labeled as "Click Here for Broken Link" below the "Broken Link" title and click on it to ensure it redirects to an error page (specifically to https://the-internet.herokuapp.com/status_codes/500) or shows an error message.
+
+Expected Results:
+a. The website https://www.demoqa.com/broken loads successfully in the browser, displaying all elements without any missing layout components. However, below the "Broken image" title, there should be an intentional broken image icon indicating an issue with the image source or loading,
+b. After initiating the testing process, below the "Valid image" title, a properly displayed image should be visible, confirming its validity,
+c. Below the "Broken image" title, a broken/missing image icon should be displayed, indicating an issue with the image source or loading,
+d. After locating the embedded link labeled "Click Here for Valid Link" below the "Valid Link" title, clicking on it should redirect to the correct destination, specifically https://www.demoqa.com website,
+e. Upon locating the embedded link labeled "Click Here for Broken Link" below the "Broken Link" title, clicking on it should lead to an error page or display an error message. Specifically, it should redirect to https://the-internet.herokuapp.com/status_codes/500, indicating an issue with the link.
+
+1.7 Upload/Download files:
+Test Objective: Verify the functionality of downloading files from the website and uploading files to the website from local storage.
+
+Test Steps:
+a. Open the website https://www.demoqa.com/upload-download in the browser to initiate the testing process.
+b. Download File:
+ b.a. Locate and click on the "Download" button,
+ b.b. Verify that proper information about initiating the download process, including a progress bar, is displayed,
+ b.c. Ensure that downloaded file size is not 0B and that it can be opened correctly.
+c. Upload File:
+ c.a. Locate and click on the "Choose File" button below the "Select a file" title,
+ c.b. Verify that proper information about the maximum file size limit is displayed before initiating the upload process,
+ c.c. Ensure that only one file at a time can be chosen from a local storage in the new popup window,
+ c.d. Check that the following popular file extensions are supported: .jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .zip, .rar,
+ c.e. Verify that a proper error message is displayed when an unsupported file extension is chosen,
+ c.f. Verify that a proper error message is displayed when the file size limit is exceeded,
+ c.g. After choosing a proper file that meets the requirements, verify that the upload process to the website is initiated with a progress bar and current upload status. Ensure that the proper file name with its extension is displayed,
+ c.h. After the upload process is finished, verify that proper information about finished process is displayed, including the path to which it was uploaded,
+d. Verify Uploaded File:
+ d.a. Confirm that the recently uploaded file can be downloaded to local storage,
+ d.b. Ensure that the download process completes successfully and that the downloaded file can be opened without errors, indicating that files are properly uploaded to the website.
+
+Expected Results:
+a. The website https://www.demoqa.com/upload-download loads successfully in the browser, displaying all elements without any missing layout components.
+b. Download File:
+ b.a. After clicking on the "Download" button, proper information about initiating the download process, including a progress bar, should be displayed to the user,
+ b.b. After downloading the file, verify and ensure that the file size is not 0B and that it can be opened correctly,
+c. Upload File:
+ c.a. Before initiating the upload process, proper information about the maximum file size limit should be displayed to the user,
+ c.b. After clicking on the "Choose File" button below the "Select a file" title, a new popup window with a list of local disks/folders/files should be displayed to the user to allow choosing the file for upload,
+ c.c. Only one file at a time should be selectable from local storage in the newly displayed popup window,
+ c.d. Supported file extensions include .jpg, .jpeg, .png, .gif, .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .zip, .rar. An error message should be displayed if an unsupported file extension is chosen,
+ c.e. If the file size limit is exceeded, a proper error message should be displayed to the user,
+ c.f. After selecting a proper file meeting the requirements, the upload process to the website should initiate, displaying proper information such as a progress bar and current upload status to the user. The proper file name with its extension should also be displayed,
+ c.g. After the upload process is finished, proper information about the finished process should be displayed to the user, including the path to which it was uploaded,
+d. Verify Uploaded File:
+ d.a. The recently uploaded file should be downloadable to local storage,
+ d.b. The download process should complete successfully, and the downloaded file should be openable without errors, indicating that files are properly uploaded to the website.
 
 2. Forms:
 
