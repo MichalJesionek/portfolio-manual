@@ -213,7 +213,7 @@ h. After clicking on the embedded "Unauthorized" link, a proper API call should 
 i. After clicking on the embedded "Forbidden" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]",
 j. After clicking on the embedded "Not Found" link, a proper API call should be made, and a proper API code response should be received. The informational prompt should display: "Link has responded with status [API response code] and status text [corresponding to the currently clicked embedded link label]".
 
-1.6 Links:
+1.7 Displaying images and links:
 Test Objective: Verify functionality of displaying images and embedded links.
 
 Test steps:
@@ -230,7 +230,7 @@ c. Below the "Broken image" title, a broken/missing image icon should be display
 d. After locating the embedded link labeled "Click Here for Valid Link" below the "Valid Link" title, clicking on it should redirect to the correct destination, specifically https://www.demoqa.com website,
 e. Upon locating the embedded link labeled "Click Here for Broken Link" below the "Broken Link" title, clicking on it should lead to an error page or display an error message. Specifically, it should redirect to https://the-internet.herokuapp.com/status_codes/500, indicating an issue with the link.
 
-1.7 Upload/Download files:
+1.8 Upload/Download files:
 Test Objective: Verify the functionality of downloading files from the website and uploading files to the website from local storage.
 
 Test Steps:
@@ -269,18 +269,208 @@ d. Verify Uploaded File:
  d.a. The recently uploaded file should be downloadable to local storage,
  d.b. The download process should complete successfully, and the downloaded file should be openable without errors, indicating that files are properly uploaded to the website.
 
+1.9 Dynamic Properties:
+Test Objective: Verify the functionality of dynamically changing elements of website.
+
+Test Steps:
+a. Open the website https://www.demoqa.com/dynamic-properties in the browser to initiate the testing process,
+b. Observation:
+ b.a. Open the website and locate the caption "This text has random Id" without any visible ID,
+ b.b. Check and note its ID by using "Inspect element" option inside the browser,
+ b.c. Initially, note the state of the visible buttons before the 5-second interval (Will enable 5 seconds and Color Change),
+c. First reload:
+ c.a. Reload the webpage,
+d. Verification:
+ d.a. After reloading the page, once again locate the caption "This text has random Id" and using "Inspect element" option check its ID,
+ d.b. Check and verify if its ID has been changed after reloading the webpage,
+e. Second reload and wait:
+ e.a. Reload the webpage once again to verify if any changes will be made after certain amount of time excluding veryfing ID of the label "This text has been random Id",
+ e.b. Wait for 5 seconds,
+f. Verification:
+ f.a. Verify the visibility and properties of the buttons (Will enable 5 seconds and Color Change) after the second reload,
+ f.b. Inspect the first button labeled "Will enable 5 seconds" after 5 seconds to verify if it get active after certain amount of time and is able to click now,
+ f.c. Inspect the second button labeled "Color Change" after 5 seconds to verify if its label changed color after certain amount of time,
+ f.d. Locate and verify if the third button labeled "Visible After 5 Seconds" becomes visible after 5 seconds,
+g. Comparison:
+ g.a. Compare the properties of each button after 5 seconds with their initial state noted before the certain interval of time,
+h. Validation:
+ h.a. If any expected changes occur, validate that these changes have occurred as expected by checking the properties, ensuring they match the expected behavior.
+
+Expected Results:
+a. The website https://www.demoqa.com/dynamic-properties loads successfully in the browser, displaying all elements without any missing layout components,
+b. Observation:
+ b.a. The caption "This text has a random Id" is located on the webpage without any visible ID,
+ b.b. The ID of the caption "This text has a random ID" is checked and noted using the "Inspect element" option inside the browser,
+ b.c. The initial state of the visible buttons (Will enable 5 seconds and Color Change) is noted before the 5-second interval,
+c. First reload:
+ c.a. The webpage is reloaded successfully,
+d. Verification:
+ d.a. After reloading the page, the caption "This text has a random Id" is located again, and its ID is checked using the "Inspect element" option,
+ d.b. The ID of the caption "This text has a random ID" is verified to have changed after reloading the webpage,
+e. Second reload and wait:
+ e.a. The webpage is reloaded once again to verify if any changes occur after a certain amount of time, excluding the verification of the ID of the caption "This text has a random Id",
+ e.b. A 5-second wait period is initiated,
+f. Verification:
+ f.a. The visibility and properties of the buttons (Will enable 5 seconds and Color Change) are verified after the second reload,
+ f.b. The first button labeled "Will enable 5 seconds" becomes active and clickable after 5 seconds,
+ f.c. The label of the second button "Color Change" changes to red color after 5 seconds,
+ f.d. The third button labeled "Visible After 5 Seconds" becomes visible to the user after 5 seconds,
+g. Comparison:
+ g.a. The properties of each button after 5 seconds are compared with their initial state noted before the 5-second interval,
+h. Validation:
+ h.a. If any expected changes occur, validation is performed to ensure that these changes have occurred as expected by checking the properties, ensuring they match the expected behavior.
+
 2. Forms:
 
 2.1 Practice Form:
 
 Test Objective: Verify functionality of the practice form.
-Test Steps:
-Fill out the form with valid data.
-Submit the form with incomplete data.
+
+General Functionality Tests:
+ a. Open the website https://www.demoqa.com/automation-practice-form in the browser to initiate the testing process,
+ b. Submit the form using dedicated "Submit" button without filling any fields,
+ c. Fill only some of the available fields and submit the form using dedicated "Submit" button,
+ d. Fill the form with valid data generated on https://www.fakenamegenerator.com and submit the form using dedicated "Submit" button,
+ e. Test form submission after filling with invalid data: Submit the form with a mix of valid and invalid data in different fields. Verify appropriate error messages are displayed for each invalid entry,
+ f. Verify if filling out required field or chosing required choices have any impact on the form,
+
+Specific Field Tests:
+ a. Name:
+  a.a. Enter valid data (alphabets) in both First Name and Last Name fields,
+  a.b. Enter invalid data (special characters or exceeding character limit if it is discloused) in either field,
+  a.c. Leave one of the Name fields empty,
+  a.d. Try entering data exceeding the character limit in both Name fields (if applicable)
+
+b. Email:
+ b.a. Enter a valid email address,
+ b.b. Enter an invalid email address (missing '@' symbol or other format issues),
+ b.c. Enter an email address with a typo in the domain name (e.g., gmail.com becomes gamil.com),
+
+c. Gender:
+ c.a. Select each radio button (Man, Female, Other). Verify only one selection is possible at a time,
+ c.b. Try selecting multiple radio buttons simultaneously (verify only one remains selected),
+
+d. Mobile(10 Digits):
+ d.a. Enter a valid 10-digit phone number (format might vary based on region),
+ d.b. Enter invalid data (alphabets or special characters),
+ d.c. Enter a phone number exceeding 10 digits,
+ d.d. Try entering a phone number with leading zeros (if applicable in some regions),
+ d.e. Test behavior for entering phone numbers with special characters allowed by the format (e.g., + or - signs),
+
+e. Date of Birth:
+ e.a. Click the Date of Birth field and verify a calendar is displayed,
+ e.b. Select a valid date in the past,
+ e.c. Select a future date or the present date,
+ e.d. Try selecting a future date exceeding a specific limit (e.g., 100 years in the future). Verify if there's a validation or limitation
+
+f. Subjects:
+ f.a. Verify the text box functionality. Start typing a letter and observe if relevant subjects including typed letter appear,
+ f.b. Select multiple subjects by clicking on them,
+ f.c. Delete individual subjects using the "X" button next to each label,
+ f.d. Try selecting more subjects than can be visually displayed (verify behavior if there's a limit),
+ f.e. Verify selection is maintained when navigating away from the field and returning,
+ f.f. Test if there's a search functionality within the textbox for subjects (if available),
+ f.g. Try selecting subjects using keyboard shortcuts (e.g., Ctrl+Click for multiple selection),
+
+g. Hobbies:
+ g.a. Select each checkbox (Sports, Reading, Music) individually,
+ g.b. Select all three checkboxes simultaneously,
+ g.c. Deselect individual checkboxes,
+
+h. Picture Select:
+ h.a. Verify the initial state displays "No file chosen",
+ h.b. Click the "Choose File" button and verify a file selection dialog opens,
+ h.c. Upload a valid image file (e.g., JPG, PNG). Verify the filename and extension are displayed,
+ h.d. Upload a file of an unsupported format,
+ h.e. Upload a file exceeding the size limit (if specified),
+ h.f. Try uploading an empty file,
+ h.g. Test uploading a file with a very long filename (if character limits exist),
+
+i. Current Address:
+ i.a. Enter valid address details (street, city, state or province, postal code, building number, flat number),
+ i.b. Do not enter any details,
+
+j. State and City:
+ j.a. Verify "Select State" dropdown functionality,
+ j.b. Select a state from the dropdown,
+ j.c. Verify "Select City" dropdown becomes active and displays relevant cities based on the chosen state,
+ j.d. Select a city from the dropdown,
+ j.e. Try selecting a state and then a city, then change the state (verify the city dropdown updates accordingly).
+
+Additional Tests:
+
+a. Test form behavior when navigating away from the page:
+ a.a. Partially fill the form and navigate to another page. Verify if the data persists or gets cleared.
+
 Expected Results:
-Form submission successful with valid data.
-Proper handling of incomplete submissions.
-(Continue similarly for each section)
+
+General Functionality Tests:
+a. The website https://www.demoqa.com/automation-practice-form loads successfully in the browser, displaying all elements without any missing layout components,
+b. Submitting the form without filling any fields displays error messages for all required fields or highlights the required fields with red color,
+c. Submitting the form with some missing required fields displays error messages for the remaining missing fields or highlights the required fields with red color,
+d. Filling the form with valid data and submitting results in a success message "Submitted!" or redirection to a confirmation page,
+e. Submitting the form with a mix of valid and invalid data displays error messages for each invalid field, highlighting the specific issue. Valid fields are highlighted with green color,
+f. Submitting the form is only possible after filling all required fields and making any mandatory selections,
+
+Specific Field Tests:
+
+a. Name:
+ a.a. Entering valid alphabets in both Name fields is accepted without errors,
+ a.b. Entering invalid data (special characters or exceeding character limit) displays an error message or highlights the fields with red color indicating the issue,
+ a.c. Leaving one of the Name fields empty displays an error message for the missing field or highlights the field with red color indicating the issue,
+ a.d. If the form has a character limit, exceeding it in both Name fields displays an error message (truncation might occur) or highlights the fields with red color indicating the issue. If no limit exists, the data is accepted without any visible signs of error,
+
+b. Email:
+ b.a. A valid email address is accepted without errors,
+ b.b. An invalid email address (missing '@' symbol or other format issues) displays an error message or highlights the field with red color indicating the invalid format,
+ c.c. An email address with a typo in the domain name displays an error message or highlights the field with red color indicating the invalid format,
+
+c. Gender:
+ c.a. Selecting each radio button (Man, Female, Other) allows only one selection at a time, deselecting the previous choice,
+ c.b. Trying to select multiple radio buttons simultaneously results in only one remaining selected (typically the last one clicked),
+
+d. Mobile(10 Digits):
+ d.a. A valid 10-digit phone number is accepted without errors.
+ d.b. Entering invalid data (alphabets or special characters) displays an error message or highlights the field with red color indicating invalid characters,
+ d.c. Entering a phone number exceeding 10 digits might be truncated (if allowed) or display an error message or highlights the field with red color indicating the issue (depending on the form's implementation),
+ d.d. A phone number with leading zeros (if applicable) is accepted,
+ d.e. Allowed special characters in the phone number format (e.g., + or -) are accepted,
+
+e. Date of Birth:
+ e.a. Clicking the Date of Birth field displays a calendar,
+ e.b. Selecting a valid date in the past is accepted,
+ e.c. Selecting a future date or the present date is either accepted (if allowed) or displays a validation message (if there's a limitation),
+
+f. Subjects:
+ f.a. Typing a letter displays relevant subjects in a dropdown or suggestion list,
+ f.b. Selecting multiple subjects displays them as chips or labels within the text box,
+ f.c. Clicking on "X" next to the individual subjects removes them from the selection,
+ f.d. Selecting more subjects than can be visually displayed might limit the view with options to scroll or see more (depending on the implementation),
+ f.e. Previously chosen subjects remain selected when navigating away from the field and returning,
+
+g. Hobbies:
+ g.a. Selecting each checkbox (Sports, Reading, Music) individually marks the corresponding checkbox as selected,
+ g.b. Selecting all three checkboxes simultaneously marks all three as selected,
+ g.c. Deselecting individual checkboxes unmarks them,
+
+h. Picture Select:
+ h.a. The initial state displays "No file chosen",
+ h.b. Clicking the "Choose File" button opens a standard file selection dialog,
+ h.c. Uploading a valid image file (e.g., JPG, PNG) displays the filename and extension,
+ h.d. Uploading a file of an unsupported format displays an error message,
+ h.e. Uploading a file exceeding the size limit (if specified) displays an error message,
+ h.f. Trying to upload an empty file might display an error message (depending on the implementation),
+ h.g. Uploading a file with a very long filename might truncate the display (depending on the implementation),
+
+i. Current Address:
+ i.a. Entering valid address details is accepted,
+ i.b. Leaving the address details empty might be allowed or display an error message/highlights the field with red color indicating the issue (depending on the implementation),
+
+j. State and City (if applicable):
+ j.a. The "Select State" dropdown functionality allows selecting a state,
+ j.b. Selecting a state activates the "Select City" dropdown and displays relevant cities based on the chosen state, 
+ j.c. Selecting a city from the dropdown is accepted, 
+ j.d. Selecting a state and then a city, followed by changing the state, updates the city dropdown to reflect the new state.
 
 3. Alerts, Frames, and Windows:
 
