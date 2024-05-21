@@ -323,7 +323,6 @@ h. Validation:
 2. Forms:
 
 2.1 Practice Form:
-
 Test Objective: Verify functionality of the practice form.
 
 General Functionality Tests:
@@ -474,19 +473,51 @@ j. State and City (if applicable):
 
 3. Alerts, Frames, and Windows:
 
-(Include objectives, test steps, and expected results)
+3.1 Browser Windows:
+Test Objective: Verify the functionality of browser Windows (using dedicated buttons on the website).
+
+Test Steps:
+a. Open the website https://www.demoqa.com/browser-windows in the browser to initiate the testing process,
+b. Click on the "New Tab" button. Ensure that it opens new browser tab,
+c. Click on the "New Window" button. Ensure that it opens new browser window,
+d. Click on the "New Window Message". Ensure that it opens new browser window with message.
+
+Expected Results:
+a. The website https://www.demoqa.com/browser-windows loads successfully in the browser, displaying all elements without any missing layout components,
+b. After clicking on the "New Tab" button, a new browser tab should be opened next to the card which is currently active each time when the button has been clicked. The newly opened tab should be in focus after clicking the button, this ensures the user's attention is directed to the new tab,
+c. After clicking on the "New Window" button, a new browser window should be opened and displayed to the user each time when the button has been clicked. The newly opened window should be in focus after clicking the button, this ensures the user's attention is directed to the new window,
+d. After clicking on the "New Windows Message" button, ensure that it opens a new browser window with the message "Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization." each time when the button has been clicked.
+
+3.2 Alerts: 
+Test Objective: Verify the functionality of displaying alerts to the user.
+
+Test Steps:
+a. Open the website https://www.demoqa.com/alerts in the browser to initiate the testing process,
+b. Verify that four text lines with labeled buttons next to each line are displayed on the website:
+ b.a. First line "Click Button to see alert" and labeled button "Click me" next to it,
+ b.b. Second line "On button click, alert will appear after 5 seconds" and labeled button "Click me" next to it,
+ b.c. Third line "On button click, confirm box will appear" and labeled button "Click me" next to it,
+ b.d. Fourth line "On button click, prompt box will appear" and labeled button "Click me" next to it,
+c. Click the button next to "Click Button to see alert", ensure that new alert message with specific information and button is displayed to the user,
+d. Click the button next to "On button click, alert will appear after 5 seconds" ensure that new alert message with specific information and button is displayed to the user after 5 seconds,
+e. Click the button next to "On button click, confirm box will appear", ensure that new alert/message box with specific information and buttons is displayed to the user, also ensure that after click on displayed buttons proper information about which button was clicked is presented,
+f. Click the button next to "On button click, prompt box will appear", ensure that new alert/message box with input field and specific buttons is displayed to the user, also ensure that after filling out the input field and confirming it proper information with entered data is presented.
+
+Expected Results:
+a. The website https://www.demoqa.com/alerts loads successfully in the browser, displaying all elements without any missing layout components,
+b. After clicking on the button next to "Click Button to see alert" 
 
 4. Widgets:
 
-(Include objectives, test steps, and expected results)
+
 
 5. Interactions:
 
-(Include objectives, test steps, and expected results)
+
 
 6. Book Store Application:
 
-(Include objectives, test steps, and expected results)
+
 
 Preconditions and Assumptions:
 
@@ -514,22 +545,17 @@ Test coverage will be validated against system functionality to ensure completen
 
 6. Test Data:
 
-Test data will be generated internally for form submissions, interactions, and other scenarios as needed.
+
 7. Test Execution:
 
-Execute each test case according to the defined steps.
-Record test results, including pass/fail status, observations, and any defects found.
+
 8. Error Handling:
 
-Include test cases to verify error handling scenarios, such as invalid inputs, unexpected user actions, and server errors.
+
 9. Reporting:
 
-Test results will be documented in a test report.
-Defects will be logged in the defect tracking system with proper prioritization and severity.
+
 10. Review and Validation:
 
-The test plan will be reviewed by stakeholders to ensure coverage and alignment with project requirements.
-Test coverage will be validated against system functionality to ensure completeness.
-11. Conclusion:
 
-Upon completion of testing, a summary report will be prepared, highlighting key findings and recommendations for improvement.
+11. Conclusion:
