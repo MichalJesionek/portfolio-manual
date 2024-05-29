@@ -7,14 +7,15 @@ Usability Testing
 Exploratory Testing
 Bug Identification & Reporting
 Familiarity with Jira (self-taught), SoapUI (self-taught), Katalon Studio (self-taught), Docker (self-taught), Selenium (python) (self-taught), SQL (self-taught)
+
 Experience with Testing Methodologies:
 
-Black-Box Testing
-API Testing
+Black-Box Testing and API Testing
 
 Portfolio Projects:
 
 https://github.com/MichalJesionek/portfolio-manual/ (in progress)
+
 https://github.com/MichalJesionek/portfolio-automation/ (in early stage - private till I finish portfolio for manual testing)
 
 Looking Forward:
