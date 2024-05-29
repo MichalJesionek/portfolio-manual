@@ -13,6 +13,7 @@ Black-Box Testing
 API Testing
 
 Portfolio Projects:
+
 https://github.com/MichalJesionek/portfolio-manual/ (in progress)
 https://github.com/MichalJesionek/portfolio-automation/ (in early stage - private till I finish portfolio for manual testing)
 
